@@ -18,7 +18,9 @@ export const Google = () => {
         auto-rotate 
         ar
         ios-src="/Caixa_ios.usdz"
-      ></model-viewer>
+        loading="eager"
+        skybox-image="/ambiente.hdr"
+      />
     </div>
   );
 }

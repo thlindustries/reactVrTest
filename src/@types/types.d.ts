@@ -14,6 +14,7 @@ interface ModelViewerJSX {
   src: string
   poster?: string
   ar: boolean;
+  loading: string;
   // ... others
 }
 
@@ -25,7 +26,6 @@ interface ModelViewerElement extends Element {
         setBaseColorFactor: ((x: [number, number, number, number]) => void),
         setMetallicFactor: ((x: number) => void),
         setRoughnessFactor: ((x: number) => void),
-
         baseColorTexture: null | {
           texture: {
             source: {
