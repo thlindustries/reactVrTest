@@ -1,7 +1,7 @@
-import { Suspense, useRef } from 'react'
-import { Canvas } from '@react-three/fiber'
-import { OrbitControls, Stage } from '@react-three/drei'
-// import { VRCanvas } from '@react-three/xr'
+import { Suspense, useRef } from 'react';
+// import { Canvas } from '@react-three/fiber';
+import { OrbitControls, Stage } from '@react-three/drei';
+import { ARCanvas } from '@react-three/xr';
 
 import Caixa from './Caixa';
 import styles from './styles.module.scss';
@@ -12,14 +12,14 @@ export const Item = () => {
   return (
     <div className={styles.model}>
       <p>Teste</p>
-      <Canvas shadows dpr={[1, 2]} camera={{ fov: 50 }}>
+      <ARCanvas shadows dpr={[1, 2]} camera={{ fov: 50 }}>
         <Suspense fallback={null}>
           <Stage controls={ref} preset="rembrandt" intensity={1} environment="city">
             <Caixa />
           </Stage>
         </Suspense>
         <OrbitControls ref={ref} autoRotate />
-      </Canvas>
+      </ARCanvas>
     </div>
   );
 }
