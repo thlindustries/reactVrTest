@@ -1,6 +1,5 @@
 import styles from './styles.module.scss';
 import "@google/model-viewer";
-import {ModelViewerJSX} from '@google/model-viewer';
 
 declare global {
   namespace JSX {
@@ -18,7 +17,7 @@ export const Google = () => {
         camera-controls 
         auto-rotate 
         ar
-        ios-src="public/Caixa_ios.usdz"
+        ios-src="/Caixa_ios.usdz"
       ></model-viewer>
     </div>
   );
