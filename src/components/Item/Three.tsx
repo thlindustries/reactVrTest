@@ -1,7 +1,7 @@
-import * as THREE from 'three'
-import { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three/examples/jsm/loaders/GLTFLoader'
+import { useRef } from 'react';
+import * as THREE from 'three';
+import { useGLTF } from '@react-three/drei';
+import { GLTF } from 'three/examples/jsm/loaders/GLTFLoader';
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -13,8 +13,10 @@ type GLTFResult = GLTF & {
 }
 
 export default function Model(props: JSX.IntrinsicElements['group']) {
-  const group = useRef<THREE.Group>()
-  const { nodes, materials } = useGLTF('/Caixa.gltf') as GLTFResult
+  const group = useRef<THREE.Group>();
+
+  const { nodes, materials } = useGLTF('/Caixa.gltf') as GLTFResult;
+
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">

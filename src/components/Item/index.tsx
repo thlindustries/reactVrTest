@@ -1,26 +1,43 @@
-import { Suspense, useRef } from 'react';
-// import { Canvas } from '@react-three/fiber';
+import { Suspense, useRef,useState } from 'react';
+
 import { OrbitControls, Stage } from '@react-three/drei';
 import { ARCanvas, DefaultXRControllers } from '@react-three/xr';
 
-import Caixa from './Caixa';
+import Caixa from './Three';
+import {Google} from './Google';
+
 import styles from './styles.module.scss';
 
 export const Item = () => {
+  const [visibleOption, setVisibleOption] = useState('three');
+
   const ref = useRef<any>();
+
+  const toggleVisibleOption = () => {
+    if (visibleOption === 'three') {
+      setVisibleOption('google');
+    } else {
+      setVisibleOption('three');
+    }
+  }
 
   return (
     <div className={styles.model}>
-      <p>Teste</p>
-      <ARCanvas shadows dpr={[1, 2]} camera={{ fov: 50 }}>
-        <DefaultXRControllers />
-        <Suspense fallback={null}>
-          <Stage controls={ref} preset="rembrandt" intensity={1} environment="city">
-            <Caixa />
-          </Stage>
-        </Suspense>
-        <OrbitControls ref={ref} autoRotate />
-      </ARCanvas>
+      <h1>{`Lib utilizada: ${visibleOption}`}</h1>
+      <button type="button" onClick={toggleVisibleOption}>Mudar 3D Lib</button>
+      {visibleOption === 'three' ? (
+        <ARCanvas shadows dpr={[1, 2]} camera={{ fov: 100 }}>
+          <DefaultXRControllers />
+          <OrbitControls ref={ref} autoRotate />
+          <Suspense fallback={null}>
+            <Stage controls={ref} preset="rembrandt" intensity={1} environment="city">
+              <Caixa />
+            </Stage>
+          </Suspense>
+        </ARCanvas>
+      ) : (
+        <Google />
+      )}
     </div>
   );
 }
