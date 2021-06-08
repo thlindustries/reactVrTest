@@ -1,6 +1,6 @@
 import { Suspense, useRef } from 'react'
 import { OrbitControls, Stage } from '@react-three/drei'
-import { VRCanvas } from '@react-three/xr'
+import { VRCanvas, DefaultXRControllers } from '@react-three/xr'
 
 import Caixa from './Caixa';
 import styles from './styles.module.scss';
@@ -12,12 +12,14 @@ export const Item = () => {
     <div className={styles.model}>
       <p>Teste</p>
       <VRCanvas shadows dpr={[1, 2]} camera={{ fov: 50 }}>
+        <ambientLight />
+        <DefaultXRControllers />
+        <OrbitControls ref={ref} autoRotate />
         <Suspense fallback={null}>
           <Stage controls={ref} preset="rembrandt" intensity={1} environment="city">
             <Caixa />
           </Stage>
         </Suspense>
-        <OrbitControls ref={ref} autoRotate />
       </VRCanvas>
     </div>
   );
