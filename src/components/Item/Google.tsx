@@ -9,17 +9,26 @@ declare global {
   }
 }
 
-export const Google = () => {
+export const Google = ({src,ios}: any) => {
   return (
-    <div className={styles.model}>
+    <div className={styles.modelContainer}>
       <model-viewer 
-        src="/Caixa.gltf" 
+        src={src} 
         camera-controls 
         auto-rotate 
         ar
-        ios-src="/Caixa_ios.usdz"
+        ios-src={ios}
         loading="eager"
-        skybox-image="/ambiente.hdr"
+        skybox-image="c1.hdr"
+      />
+      <model-viewer 
+        src={src} 
+        camera-controls 
+        auto-rotate 
+        ar
+        ios-src={ios}
+        loading="eager"
+        skybox-image="c2.hdr"
       />
     </div>
   );

@@ -43,7 +43,8 @@ export const Item = () => {
       ) : (
         <Google />
       )} */}
-      <Google />
+
+      <Google src="/Caixa.gltf" ios="/Caixa.usdz" />
     </div>
   );
 }
