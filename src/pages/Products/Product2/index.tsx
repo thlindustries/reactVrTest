@@ -2,7 +2,7 @@ import Tilt from 'react-vanilla-tilt';
 
 import { Item } from 'components/Item';
 
-import styles from './styles.module.scss';
+import styles from '../styles.module.scss';
 
 export const Product2 = () => {
   return (

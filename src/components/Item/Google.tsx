@@ -19,6 +19,8 @@ export const Google = ({src,ios}: any) => {
         ar
         ios-src={ios}
         loading="eager"
+        shadow-intensity="1"
+        reveal="interaction"
       />
     </div>
   );

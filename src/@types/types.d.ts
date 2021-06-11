@@ -14,8 +14,9 @@ declare global {
 interface ModelViewerJSX {
   src: string
   poster?: string
-  ar: boolean;
-  loading: string;
+  reveal?: string;
+  ar?: boolean;
+  loading?: string;
   // ... others
 }
 

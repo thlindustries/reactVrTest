@@ -9,13 +9,13 @@ export const Landing = () => {
   const openProduct = useCallback((product: string)=>{
     switch(product){
       case 'p1':
-        push('/product1');
+        push('/bruggerman');
         break;
       case 'p2':
-        push('/product2');
+        push('/saf-instant');
         break;
       case 'p3':
-        push('/product3');
+        push('/fermipan');
         break;
       default: 
         break;
@@ -25,9 +25,9 @@ export const Landing = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.buttonsContainer}>
-        <button type="button" onClick={()=>openProduct('p1')}>Produto 1</button>
-        <button type="button" onClick={()=>openProduct('p2')}>Produto 2</button>
-        <button type="button" onClick={()=>openProduct('p3')}>Produto 3</button>
+        <button type="button" onClick={()=>openProduct('p1')}>Bruggerman</button>
+        <button type="button" onClick={()=>openProduct('p2')}>Saf-instant</button>
+        <button type="button" onClick={()=>openProduct('p3')}>Fermipan</button>
       </div>
     </div>
   );

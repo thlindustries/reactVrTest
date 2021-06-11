@@ -2,13 +2,11 @@ import Tilt from 'react-vanilla-tilt';
 
 import { Item } from 'components/Item';
 
-import styles from './styles.module.scss';
+import styles from '../styles.module.scss';
 
-export const Product1 = () => {
+export const Product3 = () => {
   return (
-
     <div className={styles.wrapper}>
-      
       <Tilt className={styles.test}>
         <div className={styles.card}>
           <div className={styles.itemContainer}>
@@ -27,7 +25,7 @@ export const Product1 = () => {
       <Tilt className={styles.test}>
         <div className={styles.card}>
           <div className={styles.itemContainer}>
-            <Item src="/Burggeman_Salgada.gltf" ios="/Burggeman_Salgada.usdz" />
+            <Item src="/Caixa.gltf" ios="/Caixa.usdz" />
           </div>
           <div className={styles.descriptionContainer}>
             <div className={styles.descriptionContent}>
