@@ -17,6 +17,9 @@ interface ModelViewerJSX {
   reveal?: string;
   ar?: boolean;
   loading?: string;
+  exposure?: number;
+  'shadow-intensity'?: number;
+  'shadow-softness'?: number;
   // ... others
 }
 
