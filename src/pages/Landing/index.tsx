@@ -1,43 +1,34 @@
-import Tilt from 'react-vanilla-tilt';
-
-import { Item } from 'components/Item';
+import {useCallback} from 'react';
+import {useHistory} from 'react-router-dom';
 
 import styles from './styles.module.scss';
 
 export const Landing = () => {
+  const {push} = useHistory();
+
+  const openProduct = useCallback((product: string)=>{
+    switch(product){
+      case 'p1':
+        push('/product1');
+        break;
+      case 'p2':
+        push('/product2');
+        break;
+      case 'p3':
+        push('/product3');
+        break;
+      default: 
+        break;
+    }
+  },[push]);
+
   return (
-
     <div className={styles.wrapper}>
-      
-      <Tilt className={styles.test}>
-        <div className={styles.card}>
-          <div className={styles.itemContainer}>
-            <Item src="/Caixa.gltf" ios="/Caixa.usdz" />
-          </div>
-          <div className={styles.descriptionContainer}>
-            <div className={styles.descriptionContent}>
-              <h1>Fermipan® Massa Sal 500g (Vermelho)</h1>
-              <span>Fermento Biológico</span>
-              <p>Fermento biológico seco instantâneo especialmente desenvolvido para todos os tipos de pães e massas panificáveis, sendo mais indicado para pães salgados e pizzas</p>
-            </div>
-          </div>
-        </div>
-      </Tilt>
-
-      <Tilt className={styles.test}>
-        <div className={styles.card}>
-          <div className={styles.itemContainer}>
-            <Item src="/Burggeman_Salgada.gltf" ios="/Burggeman_Salgada.usdz" />
-          </div>
-          <div className={styles.descriptionContainer}>
-            <div className={styles.descriptionContent}>
-              <h1>Fermipan® Massa Sal 500g (Vermelho)</h1>
-              <span>Fermento Biológico</span>
-              <p>Fermento biológico seco instantâneo especialmente desenvolvido para todos os tipos de pães e massas panificáveis, sendo mais indicado para pães salgados e pizzas</p>
-            </div>
-          </div>
-        </div>
-      </Tilt>
+      <div className={styles.buttonsContainer}>
+        <button type="button" onClick={()=>openProduct('p1')}>Produto 1</button>
+        <button type="button" onClick={()=>openProduct('p2')}>Produto 2</button>
+        <button type="button" onClick={()=>openProduct('p3')}>Produto 3</button>
+      </div>
     </div>
   );
 }
