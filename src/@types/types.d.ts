@@ -20,6 +20,9 @@ interface ModelViewerJSX {
   exposure?: number;
   'shadow-intensity'?: number;
   'shadow-softness'?: number;
+  'ar-status'?: 'not-presenting'|'session-started'|'object-placed'|'failed';
+  'ar-placement'?: 'wall'|'floor';
+  orientation?: string;
   // ... others
 }
 

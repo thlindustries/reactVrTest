@@ -1,3 +1,5 @@
+import {useEffect, useRef} from 'react';
+
 import "@google/model-viewer";
 
 import styles from './styles.module.scss';
@@ -10,24 +12,31 @@ declare global {
   }
 }
 
-export const Google = ({ src, ios }: any) => {
-  // const modelViewer = document.getElementById('model-viewer-test') as any;
+export const Google = ({ src, ios, autoAR = false }: any) => {
+  const modelViewerRef = useRef<any>(null);
+  const openArButton = useRef<HTMLButtonElement>(null);
+
+  useEffect(()=>{
+    autoAR && openArButton.current?.click();
+  },[autoAR]);
 
   return (
     <div className={styles.modelContainer}>
       <model-viewer
         src={src}
         ios-src={ios}
+        ref={modelViewerRef}
         camera-controls
         auto-rotate
         ar
         loading="eager"
         shadow-intensity={3}
         shadow-softness={0}
+        exposure={1.1}
         camera-orbit="90deg 90deg 1.5m"
-        ar-modes="webxr scene-viewer quick-look"
+        ar-modes="webxr scene-viewer"
         id="model-viewer-test"
-        exposure={1.5}
+        ar-status="session-started"
       >
         {/* <div className={styles.testButton}> */}
           <button 
@@ -39,6 +48,9 @@ export const Google = ({ src, ios }: any) => {
           >
             <div className={styles.annotation}>Hmm.... rs</div>
           </button>
+          <button ref={openArButton} className={styles.customArButton} slot="ar-button">
+            👋 Abrir o modo AR
+        </button>
         {/* </div> */}
       </model-viewer>
     </div>

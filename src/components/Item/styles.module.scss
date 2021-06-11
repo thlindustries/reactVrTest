@@ -51,3 +51,23 @@
     background: rgba(0,0,0,0.8);
   }
 }
+
+.customArButton{
+  position: absolute; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white; 
+  border-radius: 6px; 
+  border: none;
+
+  bottom: 20px;
+  right: 20px;
+
+  height: 40px;
+
+  padding: 4px;
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
