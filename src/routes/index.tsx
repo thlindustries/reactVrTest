@@ -1,6 +1,6 @@
 import { Switch, Route } from 'react-router-dom';
 
-import { Header } from 'components/Header';
+// import { Header } from 'components/Header';
 
 // Public pages
 import { Landing } from 'pages/Landing';
@@ -11,7 +11,7 @@ import { Product3 } from 'pages/Products/Product3';
 export const Routes = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Switch>
         <Route path="/" exact component={Landing} />
         <Route path="/bruggerman" exact component={Product1} />
