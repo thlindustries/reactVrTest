@@ -1,5 +1,6 @@
-import styles from './styles.module.scss';
 import "@google/model-viewer";
+
+import styles from './styles.module.scss';
 
 declare global {
   namespace JSX {
@@ -10,6 +11,8 @@ declare global {
 }
 
 export const Google = ({src,ios}: any) => {
+  // const modelViewer = document.getElementById('model-viewer-test') as any;
+
   return (
     <div className={styles.modelContainer}>
       <model-viewer 
@@ -20,6 +23,9 @@ export const Google = ({src,ios}: any) => {
         ios-src={ios}
         loading="eager"
         shadow-intensity="1"
+        camera-orbit="90deg 90deg 1.5m" 
+        ar-modes="webxr scene-viewer quick-look"
+        id="model-viewer-test"
       />
     </div>
   );
