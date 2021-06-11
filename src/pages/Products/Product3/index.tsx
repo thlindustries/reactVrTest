@@ -1,8 +1,20 @@
+import { useEffect } from 'react';
 import { Item } from 'components/Item';
 
 import styles from '../styles.module.scss';
 
 export const Product3 = () => {
+  useEffect(() => {
+    const hasTitle = document.getElementById("title");
+    const newTitle = document.createElement("title");
+    newTitle.setAttribute('id', 'title');
+    newTitle.innerText = "Fermipan";
+
+    if (hasTitle) {
+      hasTitle.parentNode?.removeChild(hasTitle);
+    }
+    document.head.appendChild(newTitle);
+  }, []);
   return (
     <div className={styles.wrapper}>
       <div className={styles.card}>

@@ -1,27 +1,23 @@
-import {useEffect, useMemo, useRef} from 'react';
+import { useEffect } from 'react';
 import { Item } from 'components/Item';
 
 import styles from '../styles.module.scss';
 
 export const Product1 = () => {
-  const vw = useMemo(()=>Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0),[]);
+  useEffect(() => {
+    const hasTitle = document.getElementById("title");
+    const newTitle = document.createElement("title");
+    newTitle.setAttribute('id', 'title');
+    newTitle.innerText = "Bruggeman";
 
-  const wrapperRef = useRef<HTMLDivElement>(null);
-
-  if(wrapperRef.current){
-    
-  }
-
-  wrapperRef?.current?.addEventListener('resize',(e)=>{
-    console.log(e.view?.innerWidth);
-  });
-
-  useEffect(()=>{
-    console.log(vw);
-  },[vw]);
+    if (hasTitle) {
+      hasTitle.parentNode?.removeChild(hasTitle);
+    }
+    document.head.appendChild(newTitle);
+  }, []);
 
   return (
-    <div className={styles.wrapper} ref={wrapperRef}>
+    <div className={styles.wrapper}>
       <div className={styles.card}>
         <div className={styles.itemContainer}>
           <Item src="/Caixa.gltf" ios="/Caixa.usdz" />
