@@ -19,16 +19,6 @@ export const Google = ({src,ios}: any) => {
         ar
         ios-src={ios}
         loading="eager"
-        skybox-image="c1.hdr"
-      />
-      <model-viewer 
-        src={src} 
-        camera-controls 
-        auto-rotate 
-        ar
-        ios-src={ios}
-        loading="eager"
-        skybox-image="c2.hdr"
       />
     </div>
   );

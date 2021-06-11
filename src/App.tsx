@@ -1,11 +1,16 @@
-import { Item } from 'components/Item';
+import { BrowserRouter } from 'react-router-dom';
+
+import {Routes} from 'routes';
 
 import 'styles/global.module.scss'
 
 const App = () => {
   return (
     <div className="App">
-      <Item />
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
+      {/* <Item /> */}
     </div>
   );
 }

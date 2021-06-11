@@ -8,12 +8,11 @@
 body{
   display: flex;
   justify-content: center;
-  align-items: center;
 
-  padding: 20px 20px;
-
-  flex: 1;
   width: 100vw;
-  height: 88vh;
+  height: 100vh;
 
+  background: #dedede;
+
+  min-width: 480px;
 }
