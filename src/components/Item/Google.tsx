@@ -20,7 +20,6 @@ export const Google = ({src,ios}: any) => {
         ios-src={ios}
         loading="eager"
         shadow-intensity="1"
-        reveal="interaction"
       />
     </div>
   );
