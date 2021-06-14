@@ -12,7 +12,7 @@ declare global {
   }
 }
 
-export const Google = ({ src, ios, autoAR = false }: any) => {
+export const Google = ({ src, ios, autoAR = false, cardMsg }: any) => {
   const modelViewerRef = useRef<any>(null);
   const openArButton = useRef<HTMLButtonElement>(null);
 
@@ -46,7 +46,7 @@ export const Google = ({ src, ios, autoAR = false }: any) => {
             data-normal="0.05 0.07 0.05"
             onClick={()=>alert('Parece que deu certo heim...')}
           >
-            <div className={styles.annotation}>Hmm.... rs</div>
+            <div className={styles.annotation}>{cardMsg}</div>
           </button>
           <button ref={openArButton} className={styles.customArButton} slot="ar-button">
             👋 Abrir o modo AR
