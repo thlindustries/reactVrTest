@@ -17,7 +17,12 @@ export const Google = ({ src, ios, autoAR = false, cardMsg }: any) => {
   const openArButton = useRef<HTMLButtonElement>(null);
 
   useEffect(()=>{
-    autoAR && openArButton.current?.click();
+    if(autoAR){
+      setTimeout(()=>{
+        openArButton.current?.click();
+        console.log(autoAR);
+      },750);
+    }
   },[autoAR]);
 
   return (
