@@ -15,6 +15,7 @@ export const FermiDoce = () => {
     }
     document.head.appendChild(newTitle);
   }, []);
+  
   return (
     <div className={styles.wrapper}>
       <div className={styles.card}>

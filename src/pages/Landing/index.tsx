@@ -1,35 +1,39 @@
 import { useCallback } from 'react';
-import { useHistory } from 'react-router-dom';
 
 import styles from './styles.module.scss';
 
 export const Landing = () => {
-  const { push } = useHistory();
 
   const openProduct = useCallback((product: string) => {
     switch (product) {
       case 'p1':
-        push('/bruggerman-doce');
+        // push('/bruggerman-doce');
+        window.location.href = '/bruggerman-doce';
         break;
       case 'p2':
-        push('/bruggerman-salgado');
+        // push('/bruggerman-salgado');
+        window.location.href = '/bruggerman-salgado';
         break;
       case 'p3':
-        push('/saf-instant-doce');
+        // push('/saf-instant-doce');
+        window.location.href = '/saf-instant-doce';
         break;
       case 'p4':
-        push('/saf-instant-salgado');
+        // push('/saf-instant-salgado');
+        window.location.href = '/saf-instant-salgado';
         break;
       case 'p5':
-        push('/fermipan-doce');
+        // push('/fermipan-doce');
+        window.location.href = '/fermipan-doce';
         break;
       case 'p6':
-        push('/fermipan-salgado');
+        // push('/fermipan-salgado');
+        window.location.href = '/fermipan-salgado';
         break;
       default:
         break;
     }
-  }, [push]);
+  }, []);
 
   return (
     <div className={styles.wrapper}>
