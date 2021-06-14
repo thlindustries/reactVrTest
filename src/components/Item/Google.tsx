@@ -39,7 +39,7 @@ export const Google = ({ src, ios, autoAR = false, cardMsg }: any) => {
         shadow-softness={0}
         exposure={1.1}
         camera-orbit="90deg 90deg 1.5m"
-        ar-modes="webxr"
+        ar-modes="webxr scene-viewer quick-look"
         id="model-viewer-test"
         ar-status="session-started"
       >
