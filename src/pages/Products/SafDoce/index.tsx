@@ -8,7 +8,7 @@ export const SafDoce = () => {
     const hasTitle = document.getElementById("title");
     const newTitle = document.createElement("title");
     newTitle.setAttribute('id', 'title');
-    newTitle.innerText = "Self-Instant";
+    newTitle.innerText = "Self-Instant Doce";
 
     if (hasTitle) {
       hasTitle.parentNode?.removeChild(hasTitle);

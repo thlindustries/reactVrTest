@@ -8,7 +8,7 @@ export const FermiSalgado = () => {
     const hasTitle = document.getElementById("title");
     const newTitle = document.createElement("title");
     newTitle.setAttribute('id', 'title');
-    newTitle.innerText = "Fermipan";
+    newTitle.innerText = "Fermipan Salgado";
 
     if (hasTitle) {
       hasTitle.parentNode?.removeChild(hasTitle);

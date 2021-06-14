@@ -8,7 +8,7 @@ export const BrugeSalgado = () => {
     const hasTitle = document.getElementById("title");
     const newTitle = document.createElement("title");
     newTitle.setAttribute('id', 'title');
-    newTitle.innerText = "Bruggeman";
+    newTitle.innerText = "Bruggeman Salgado";
 
     if (hasTitle) {
       hasTitle.parentNode?.removeChild(hasTitle);
