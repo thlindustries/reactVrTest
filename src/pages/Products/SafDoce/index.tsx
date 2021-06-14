@@ -19,7 +19,7 @@ export const SafDoce = () => {
     <div className={styles.wrapper}>
       <div className={styles.card}>
         <div className={styles.itemContainer}>
-          <Item src="/Burggeman_Salgada.gltf" ios="/Burggeman_Salgada.usdz" autoAR cardMsg="Saf doce"/>
+          <Item src="/Saf_Doce.gltf" ios="/Saf_Doce.usdz" autoAR cardMsg="Saf doce"/>
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionContent}>

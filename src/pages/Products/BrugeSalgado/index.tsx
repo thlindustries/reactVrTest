@@ -20,7 +20,7 @@ export const BrugeSalgado = () => {
     <div className={styles.wrapper}>
       <div className={styles.card}>
         <div className={styles.itemContainer}>
-          <Item src="/Caixa.gltf" ios="/Caixa.usdz" autoAR cardMsg="Bruge salgado"/>
+          <Item src="/Burggeman_Salgada.gltf" ios="/Burggeman_Salgada.usdz" autoAR cardMsg="Bruge salgado"/>
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionContent}>
