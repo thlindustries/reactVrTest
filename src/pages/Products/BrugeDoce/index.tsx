@@ -26,7 +26,7 @@ export const BrugeDoce = () => {
           <div className={styles.descriptionContent}>
             <h1>Bruggeman®</h1>
             <span>Massa doce - Marrom</span>
-            <p>Bruggeman massa doce é um fermento biológico seco instantâneo de alta qualidade, indicado para receitas que contenham acima de 3% de açucar, principalmente pães doces.</p>
+            <p>Bruggeman massa doce é um fermento biológico seco instantâneo de alta qualidade, indicado para receitas que contenham acima de 3% de açúcar, principalmente pães doces.</p>
           </div>
         </div>
       </div>

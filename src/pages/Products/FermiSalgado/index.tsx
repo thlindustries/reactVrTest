@@ -26,7 +26,7 @@ export const FermiSalgado = () => {
           <div className={styles.descriptionContent}>
             <h1>Fermipan® Massa Sal 500g (Vermelho)</h1>
             <span>Fermento Biológico</span>
-            <p>Fermento biológico seco instantâneo especialmente desenvolvido para todos os tipos de pães e massas panificáveis, sendo mais indicado para pães salgados e pizzas</p>
+            <p>Fermento biológico seco instantâneo especialmente desenvolvido para todos os tipos de pães e massas panificáveis, sendo mais indicado para pães salgados e pizzas.</p>
           </div>
         </div>
       </div>

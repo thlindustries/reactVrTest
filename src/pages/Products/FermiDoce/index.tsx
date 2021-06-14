@@ -24,9 +24,9 @@ export const FermiDoce = () => {
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionContent}>
-            <h1>Fermipan® Massa Sal 500g (Vermelho)</h1>
+            <h1>Fermipan® Massa Doce 500g (Marrom)</h1>
             <span>Fermento Biológico</span>
-            <p>Fermento biológico seco instantâneo especialmente desenvolvido para todos os tipos de pães e massas panificáveis, sendo mais indicado para pães salgados e pizzas</p>
+            <p>Fermento biológico seco instantâneo especialmente desenvolvido para todos os tipos de pães e massas panificáveis, sendo mais indicado para massas doces (a partir de 3% de açúcar sobre a quantidade total de farinha).</p>
           </div>
         </div>
       </div>
