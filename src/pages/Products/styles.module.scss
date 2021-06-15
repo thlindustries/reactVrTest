@@ -6,8 +6,8 @@
   row-gap: 20px;
   column-gap: 20px;
 
-  width: 100%;
-  height: calc(100vh - 80px);
+  width: calc(0.8 * 100vw);
+  height: 80vh;
 
   padding: 80px 10px;
 
@@ -49,9 +49,9 @@
   transform-style: preserve-3d;
 
   transition: width .2s;
-  border: solid 1px red;
   @media (max-width: 980px){
     width: 100%;
+    height: 80%;
   }
 
   .itemContainer{

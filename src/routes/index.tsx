@@ -18,12 +18,12 @@ export const Routes = () => {
       {/* <Header /> */}
       <Switch>
         <Route path="/" exact component={Landing} />
-        <Route path="/bruggerman-doce" exact component={BrugeDoce} />
-        <Route path="/bruggerman-salgado" exact component={BrugeSalgado} />
+        <Route path="/bruggeman-doce" exact component={BrugeDoce} />
+        <Route path="/bruggeman-sal" exact component={BrugeSalgado} />
         <Route path="/saf-instant-doce" exact component={SafDoce} />
-        <Route path="/saf-instant-salgado" exact component={SafSalgado} />
+        <Route path="/saf-instant-sal" exact component={SafSalgado} />
         <Route path="/fermipan-doce" exact component={FermiDoce} />
-        <Route path="/fermipan-salgado" exact component={FermiSalgado} />
+        <Route path="/fermipan-sal" exact component={FermiSalgado} />
       </Switch>
     </>
   );
