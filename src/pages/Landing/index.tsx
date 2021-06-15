@@ -39,11 +39,11 @@ export const Landing = () => {
     <div className={styles.wrapper}>
       <div className={styles.buttonsContainer}>
         <button type="button" onClick={() => openProduct('p1')}>Bruggeman Doce</button>
-        <button type="button" onClick={() => openProduct('p2')}>Bruggeman Salgado</button>
+        <button type="button" onClick={() => openProduct('p2')}>Bruggeman Sal</button>
         <button type="button" onClick={() => openProduct('p3')}>Saf-instant Doce</button>
-        <button type="button" onClick={() => openProduct('p4')}>Saf-instant Salgado</button>
+        <button type="button" onClick={() => openProduct('p4')}>Saf-instant Sal</button>
         <button type="button" onClick={() => openProduct('p5')}>Fermipan Doce</button>
-        <button type="button" onClick={() => openProduct('p6')}>Fermipan Salgado</button>
+        <button type="button" onClick={() => openProduct('p6')}>Fermipan Sal</button>
       </div>
     </div>
   );
