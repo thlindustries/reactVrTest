@@ -35,6 +35,8 @@ export const BrugeSalgado = () => {
     newTitle.setAttribute('id', 'title');
     newTitle.innerText = "Bruggeman Sal";
 
+    setIsAnimationActive(false);
+
     if (hasTitle) {
       hasTitle.parentNode?.removeChild(hasTitle);
     }
