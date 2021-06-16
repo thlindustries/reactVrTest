@@ -6,7 +6,7 @@
   row-gap: 20px;
   column-gap: 20px;
 
-  width: calc(0.8 * 100vw);
+  width: calc(0.95 * 100vw);
   height: 80vh;
 
   padding: 80px 10px;
@@ -21,15 +21,6 @@
       display: none;
     }
   }
-}
-
-.test{
-  width: 540px;
-  height: 480px;
-
-  background: transparent !important;
-  padding: 0 !important;
-  
 }
 
 .card{
@@ -51,7 +42,7 @@
   transition: width .2s;
   @media (max-width: 980px){
     width: 100%;
-    height: 80%;
+    height: 100%;
   }
 
   .itemContainer{

@@ -1,4 +1,4 @@
-import {useEffect, useRef} from 'react';
+import { useEffect, useRef } from 'react';
 
 import "@google/model-viewer";
 
@@ -12,18 +12,18 @@ declare global {
   }
 }
 
-export const Google = ({ src, ios, autoAR = false, cardMsg }: any) => {
+export const Google = ({ src, ios, autoAR = false, cardMsg, child }: any) => {
   const modelViewerRef = useRef<any>(null);
   const openArButton = useRef<HTMLButtonElement>(null);
 
-  useEffect(()=>{
-    if(autoAR){
-      setTimeout(()=>{
+  useEffect(() => {
+    if (autoAR) {
+      setTimeout(() => {
         openArButton.current?.click();
         console.log(autoAR);
-      },750);
+      }, 750);
     }
-  },[autoAR]);
+  }, [autoAR]);
 
   return (
     <div className={styles.modelContainer}>
@@ -43,20 +43,18 @@ export const Google = ({ src, ios, autoAR = false, cardMsg }: any) => {
         id="model-viewer-test"
         ar-status="session-started"
       >
-        {/* <div className={styles.testButton}> */}
-          <button 
-            className={styles.testButton} 
-            slot="hotspot-hand" 
-            data-position="0.05 0.07 0.05" 
-            data-normal="0.05 0.07 0.05"
-            onClick={()=>alert('Parece que deu certo heim...')}
-          >
-            <div className={styles.annotation}>{cardMsg}</div>
-          </button>
-          <button ref={openArButton} className={styles.customArButton} slot="ar-button">
-            👋 Abrir o modo AR
+        <button
+          className={styles.testButton}
+          slot="hotspot-hand"
+          data-position="0.05 0.07 0.05"
+          data-normal="0.05 0.07 0.05"
+          onClick={() => alert('Parece que deu certo heim...')}
+        >
+          <div className={styles.annotation}>{cardMsg}</div>
         </button>
-        {/* </div> */}
+        <button ref={openArButton} className={styles.customArButton} slot="ar-button">
+          👋 Abrir o modo AR
+        </button>
       </model-viewer>
     </div>
   );
