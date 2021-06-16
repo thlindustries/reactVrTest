@@ -1,33 +1,33 @@
-import { useEffect, useCallback, useState } from 'react';
+import { useEffect } from 'react';
 import { Item } from 'components/Item';
 
 import styles from '../styles.module.scss';
 
 export const BrugeSalgado = () => {
-  const [activeTexture, setActiveTexture] = useState(0);
-  const [isAnimationActive, setIsAnimationActive] = useState(false);
+  // const [activeTexture, setActiveTexture] = useState(0);
+  // const [isAnimationActive, setIsAnimationActive] = useState(false);
 
-  const handleChangeTexture = useCallback((modelRef: any) => {
-    if (!modelRef.current) return;
-    let materials = modelRef.current.model.materials;
+  // const handleChangeTexture = useCallback((modelRef: any) => {
+  //   if (!modelRef.current) return;
+  //   let materials = modelRef.current.model.materials;
 
-    let applyPBRTexture = (channel: any, texturePath: string) => {
-      for (let i = 0; i < materials.length - 1; i++) {
-        materials[i].pbrMetallicRoughness[channel].texture.source.setURI(texturePath);
-      }
-    }
+  //   let applyPBRTexture = (channel: any, texturePath: string) => {
+  //     for (let i = 0; i < materials.length - 1; i++) {
+  //       materials[i].pbrMetallicRoughness[channel].texture.source.setURI(texturePath);
+  //     }
+  //   }
 
-    if (activeTexture === 0) {
-      setActiveTexture(1);
-      applyPBRTexture('baseColorTexture', '/assets/bruggemanSal/vanish.png');
-    } else {
-      setActiveTexture(0);
-      applyPBRTexture('baseColorTexture', '/assets/bruggemanSal/textSal.png');
-    }
-  }, [activeTexture]);
+  //   if (activeTexture === 0) {
+  //     setActiveTexture(1);
+  //     applyPBRTexture('baseColorTexture', '/assets/bruggemanSal/vanish.png');
+  //   } else {
+  //     setActiveTexture(0);
+  //     applyPBRTexture('baseColorTexture', '/assets/bruggemanSal/textSal.png');
+  //   }
+  // }, [activeTexture]);
 
-  const handlePlayAnimation = useCallback((animationName: string) => {
-  },[]);
+  // const handlePlayAnimation = useCallback((animationName: string) => {
+  // },[]);
 
   useEffect(() => {
     const hasTitle = document.getElementById("title");
@@ -35,7 +35,7 @@ export const BrugeSalgado = () => {
     newTitle.setAttribute('id', 'title');
     newTitle.innerText = "Bruggeman Sal";
 
-    setIsAnimationActive(false);
+    // setIsAnimationActive(false);
 
     if (hasTitle) {
       hasTitle.parentNode?.removeChild(hasTitle);
@@ -48,14 +48,10 @@ export const BrugeSalgado = () => {
       <div className={styles.card}>
         <div className={styles.itemContainer}>
           <Item
-            src="/assets/bruggemanSal/Bruggeman_Anim.gltf"
+            src="/assets/bruggemanSal/Bruggeman.gltf"
             ios="/Burggeman_Salgada.usdz"
             autoAR
             cardMsg="Bruge salgado"
-            autoplay={isAnimationActive}
-            animationName="teste"
-            changeTexture={handleChangeTexture}
-            toggleAnimation={handlePlayAnimation}
           />
         </div>
         <div className={styles.descriptionContainer}>

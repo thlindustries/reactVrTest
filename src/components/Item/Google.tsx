@@ -1,4 +1,4 @@
-import { useEffect, useRef, useCallback } from 'react';
+import { useEffect, useRef } from 'react';
 
 import "@google/model-viewer";
 
@@ -18,17 +18,13 @@ export const Google = ({
   autoAR = false, 
   cardMsg, 
   child,
-  autoplay,
-  animationName,
-  toggleAnimation,
-  changeTexture,
 }: any) => {
   const modelViewerRef = useRef<any>(null);
   const openArButton = useRef<HTMLButtonElement>(null);
 
-  const swapTextures = useCallback(()=>{
-    changeTexture && modelViewerRef && changeTexture(modelViewerRef);
-  },[changeTexture]);
+  // const swapTextures = useCallback(()=>{
+  //   changeTexture && modelViewerRef && changeTexture(modelViewerRef);
+  // },[changeTexture]);
 
   useEffect(() => {
     if (autoAR) {
@@ -56,9 +52,8 @@ export const Google = ({
         ar-modes="webxr scene-viewer quick-look"
         id="model-viewer-test"
         ar-status="session-started"
-        animation-name={animationName}
       >
-        <button
+        {/* <button
           className={styles.testButton}
           slot="hotspot-hand"
           data-position="0.05 0.10 0.05"
@@ -75,7 +70,7 @@ export const Google = ({
           onClick={() => toggleAnimation()}
         >
           <div className={styles.annotation}>Ativar animação</div>
-        </button>
+        </button> */}
         <button ref={openArButton} className={styles.customArButton} slot="ar-button">
           👋 Abrir o modo AR
         </button>

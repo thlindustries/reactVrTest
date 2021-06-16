@@ -8,10 +8,6 @@ export const Item = ({
     autoAR=false, 
     cardMsg="", 
     child,
-    autoplay,
-    animationName,
-    changeTexture,
-    toggleAnimation,
 }: any) => {
   return (
     <div className={styles.wrapper}>
@@ -21,10 +17,6 @@ export const Item = ({
         autoAR={autoAR} 
         cardMsg={cardMsg} 
         child={child} 
-        autoplay={autoplay}
-        animationName={animationName}
-        toggleAnimation={toggleAnimation}
-        changeTexture={changeTexture}
       />
     </div>
   );
