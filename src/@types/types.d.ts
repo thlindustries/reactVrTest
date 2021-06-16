@@ -22,6 +22,8 @@ interface ModelViewerJSX {
   'shadow-softness'?: number;
   'ar-status'?: 'not-presenting'|'session-started'|'object-placed'|'failed';
   'ar-placement'?: 'wall'|'floor';
+  'animation-name'?: string;
+  autoplay?: boolean;
   orientation?: string;
   // ... others
 }

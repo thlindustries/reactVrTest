@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useCallback } from 'react';
 
 import "@google/model-viewer";
 
@@ -12,9 +12,23 @@ declare global {
   }
 }
 
-export const Google = ({ src, ios, autoAR = false, cardMsg, child }: any) => {
+export const Google = ({ 
+  src, 
+  ios, 
+  autoAR = false, 
+  cardMsg, 
+  child,
+  autoplay,
+  animationName,
+  toggleAnimation,
+  changeTexture,
+}: any) => {
   const modelViewerRef = useRef<any>(null);
   const openArButton = useRef<HTMLButtonElement>(null);
+
+  const swapTextures = useCallback(()=>{
+    changeTexture && modelViewerRef && changeTexture(modelViewerRef);
+  },[changeTexture]);
 
   useEffect(() => {
     if (autoAR) {
@@ -42,15 +56,25 @@ export const Google = ({ src, ios, autoAR = false, cardMsg, child }: any) => {
         ar-modes="webxr scene-viewer quick-look"
         id="model-viewer-test"
         ar-status="session-started"
+        animation-name={animationName}
       >
         <button
           className={styles.testButton}
           slot="hotspot-hand"
-          data-position="0.05 0.07 0.05"
+          data-position="0.05 0.10 0.05"
           data-normal="0.05 0.07 0.05"
-          onClick={() => alert('Parece que deu certo heim...')}
+          onClick={() => swapTextures()}
         >
           <div className={styles.annotation}>{cardMsg}</div>
+        </button>
+        <button
+          className={styles.testButton}
+          data-position="0.05 0.09 -0.04"
+          data-normal="0.05 0.07 0.05"
+          slot="hotspot-center"
+          onClick={() => toggleAnimation()}
+        >
+          <div className={styles.annotation}>Ativar animação</div>
         </button>
         <button ref={openArButton} className={styles.customArButton} slot="ar-button">
           👋 Abrir o modo AR
