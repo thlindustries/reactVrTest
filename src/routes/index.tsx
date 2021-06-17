@@ -12,10 +12,11 @@ import { SafSalgado } from 'pages/Products/SafSalgado';
 import { FermiDoce } from 'pages/Products/FermiDoce';
 import { FermiSalgado } from 'pages/Products/FermiSalgado';
 
+import { Three } from 'pages/Products/Three';
+
 export const Routes = () => {
   return (
     <>
-      {/* <Header /> */}
       <Switch>
         <Route path="/" exact component={Landing} />
         <Route path="/bruggeman-doce" exact component={BrugeDoce} />
@@ -24,6 +25,7 @@ export const Routes = () => {
         <Route path="/saf-instant-sal" exact component={SafSalgado} />
         <Route path="/fermipan-doce" exact component={FermiDoce} />
         <Route path="/fermipan-sal" exact component={FermiSalgado} />
+        <Route path="/three" exact component={Three} />
       </Switch>
     </>
   );
