@@ -20,7 +20,7 @@ export const FermiDoce = () => {
     <div className={styles.wrapper}>
       <div className={styles.card}>
         <div className={styles.itemContainer}>
-          <Item src="/assets/Fermipan/V7_Fermi_Cobre.gltf" ios="/assets/Fermipan/V7_Fermi_Cobre_ios.usdz" autoAR cardMsg="Fermi doce"/>
+          <Item src="/assets/Fermipan/V7_Fermi_Cobre.gltf" ios="/assets/Fermipan/V7_Fermi_Cobre.usdz" autoAR cardMsg="Fermi doce"/>
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionContent}>

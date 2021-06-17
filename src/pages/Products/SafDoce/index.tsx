@@ -20,7 +20,7 @@ export const SafDoce = () => {
     <div className={styles.wrapper}>
       <div className={styles.card}>
         <div className={styles.itemContainer}>
-          <Item src="/assets/Saf/V7_Saf_Doce.gltf" ios="/assets/Saf/V7_Saf_Doce_ios.usdz" autoAR cardMsg="Saf doce"/>
+          <Item src="/assets/Saf/V7_Saf_Doce.gltf" ios="/assets/Saf/V7_Saf_Doce.usdz" autoAR cardMsg="Saf doce"/>
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionContent}>

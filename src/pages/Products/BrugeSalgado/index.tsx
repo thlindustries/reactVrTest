@@ -49,7 +49,7 @@ export const BrugeSalgado = () => {
         <div className={styles.itemContainer}>
           <Item
             src="/assets/bruggemanSal/V7_Brug_Azul.gltf"
-            ios="/assets/bruggemanSal/V7_Brug_Vermelha_ios.usdz"
+            ios="/assets/bruggemanSal/V7_Brug_Azul.usdz"
             autoAR
             cardMsg="Bruge salgado"
           />
