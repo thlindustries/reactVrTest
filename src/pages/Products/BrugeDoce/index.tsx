@@ -20,7 +20,7 @@ export const BrugeDoce = () => {
     <div className={styles.wrapper}>
       <div className={styles.card}>
         <div className={styles.itemContainer}>
-          <Item src="/Caixa.gltf" ios="/Caixa.usdz" autoAR cardMsg="Bruge doce" child="/Pao_Frances.gltf"/>
+          <Item src="/assets/bruggemanSal/V7_Brug_Vermelha.gltf" ios="/assets/bruggemanSal/V7_Brug_Vermelha_ios.usdz" autoAR cardMsg="Bruge doce" child="/Pao_Frances.gltf"/>
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionContent}>

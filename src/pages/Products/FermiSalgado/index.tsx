@@ -20,7 +20,7 @@ export const FermiSalgado = () => {
     <div className={styles.wrapper}>
       <div className={styles.card}>
         <div className={styles.itemContainer}>
-          <Item src="/Fermipan_Salgada.gltf" ios="/Fermipan_Salgada.usdz" autoAR cardMsg="Fermi salgado"/>
+          <Item src="/assets/Fermipan/V7_Fermi_Vermelho.gltf" ios="/assets/Fermipan/V7_Fermi_Vermelho_ios.usdz" autoAR cardMsg="Fermi salgado"/>
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionContent}>

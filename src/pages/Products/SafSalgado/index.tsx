@@ -20,7 +20,7 @@ export const SafSalgado = () => {
     <div className={styles.wrapper}>
       <div className={styles.card}>
         <div className={styles.itemContainer}>
-          <Item src="/Saf_Salgado.gltf" ios="/Saf_Salgado.usdz" autoAR cardMsg="Saf salgado"/>
+        <Item src="/assets/Saf/V7_Saf_Salgada.gltf" ios="/assets/Saf/V7_Saf_Salgada_ios.usdz" autoAR cardMsg="Fermi salgado"/>
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionContent}>
