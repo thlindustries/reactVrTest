@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+import { isAndroid, isDesktop } from 'react-device-detect';
+
 import { Item } from 'components/Item';
 
 import styles from '../styles.module.scss';
@@ -60,6 +62,11 @@ export const BrugeSalgado = () => {
             <span>Massa Tradicional - Azul</span>
             <p>Bruggeman massa tradicional é um fermento biológico seco instantâneo de alta qualidade, indicado para todos os tipos de pães e massas panificáveis, principalmente pães salgados e pizzas.</p>
           </div>
+          <a
+            href={`intent://arvr.google.com/scene-viewer/1.0?file=https://raw.githubusercontent.com/thlindustries/reactVrTest/master/public/assets/bruggemanSal/V7_Brug_Azul.${(isAndroid || isDesktop) ? 'gltf' : 'usdz'};action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;`}
+          >
+            Abrir AR
+          </a>
         </div>
       </div>
     </div>
