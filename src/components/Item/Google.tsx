@@ -46,17 +46,8 @@ export const Google = ({
         ios-src={ios}
         ref={modelViewerRef}
         camera-controls
-        auto-rotate
         ar
-        loading="eager"
-        shadow-intensity={3}
-        shadow-softness={0}
-        exposure={1.1}
         camera-orbit="90deg 90deg 1.5m"
-        ar-modes="webxr quick-look"
-        id="model-viewer-test"
-        ar-status="session-started"
-        animation-name={animationName}
       >
         <button
           className={styles.testButton}
@@ -66,18 +57,6 @@ export const Google = ({
           onClick={() => swapTextures()}
         >
           <div className={styles.annotation}>{cardMsg}</div>
-        </button>
-        <button
-          className={styles.testButton}
-          data-position="0.05 0.09 -0.04"
-          data-normal="0.05 0.07 0.05"
-          slot="hotspot-center"
-          onClick={() => toggleAnimation()}
-        >
-          <div className={styles.annotation}>Ativar animação</div>
-        </button>
-        <button ref={openArButton} className={styles.customArButton} slot="ar-button">
-          👋 Abrir o modo AR
         </button>
       </model-viewer>
     </div>

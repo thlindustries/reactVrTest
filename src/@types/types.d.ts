@@ -23,6 +23,7 @@ interface ModelViewerJSX {
   'ar-status'?: 'not-presenting'|'session-started'|'object-placed'|'failed';
   'ar-placement'?: 'wall'|'floor';
   'animation-name'?: string;
+  'ar-modes'?: string;
   autoplay?: boolean;
   orientation?: string;
   // ... others

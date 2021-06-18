@@ -1,4 +1,5 @@
 import { BrowserRouter } from 'react-router-dom';
+import "@google/model-viewer";
 
 import {Routes} from 'routes';
 

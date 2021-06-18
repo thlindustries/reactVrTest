@@ -42,6 +42,7 @@ export const Landing = () => {
         <button type="button" onClick={() => openProduct('p5')}>Fermipan Doce</button>
         <button type="button" onClick={() => openProduct('p6')}>Fermipan Sal</button>
         <button type="button" onClick={() => openProduct('p7')}>Teste com threeJs</button>
+        <a href="intent://arvr.google.com/scene-viewer/1.0?file=https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Avocado/glTF/Avocado.gltf#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;">Avocado</a>
       </div>
     </div>
   );
